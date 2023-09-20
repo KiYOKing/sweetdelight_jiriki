@@ -262,4 +262,10 @@ body {
     margin: 0 auto;
     max-width: 600px;
   }
+
+  .inner{
+    max-width: 1080px;
+    padding: 0 40px;
+    margin: 0 auto;
+  }
 }
