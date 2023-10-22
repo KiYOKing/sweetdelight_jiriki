@@ -2,6 +2,7 @@ body {
   font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
 }
 
+// header
 .header {
   position: fixed;
   top: 0;
@@ -17,12 +18,8 @@ body {
 }
 
 .header-nav-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   gap: 20px;
 }
 
@@ -30,6 +27,7 @@ body {
   color: #fff;
 }
 
+// fv
 .inner {
   padding: 0 40px;
 }
@@ -49,13 +47,16 @@ body {
   font-size: 12px;
 }
 
+// about
 .about {
   padding: 40px 0;
   background-color: #f1eee4;
 }
 
-.about-img img {
-  width: 300px;
+.about-img {
+  img {
+    width: 300px;
+  }
 }
 
 .about-text-contents {
@@ -71,6 +72,7 @@ body {
   margin-top: 16px;
 }
 
+// menu
 .menu {
   background-color: #f1eee4;
   padding: 80px 0;
@@ -152,17 +154,20 @@ body {
 
 .footer-logo {
   margin-top: 20px;
-}
-.footer-logo p {
-  font-size: 12px;
+
+  p {
+    font-size: 12px;
+  }
 }
 
-.footer-link img {
-  width: 60px;
-  margin-bottom: 10px;
-}
-.footer-link p {
-  font-size: 10px;
+.footer-link {
+  img {
+    width: 60px;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 10px;
+  }
 }
 
 .footer-inner {
@@ -171,12 +176,8 @@ body {
 }
 
 .footer-lists {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   gap: 40px;
   padding: 40px 30px;
 }
@@ -188,84 +189,71 @@ body {
   padding: 10px 0;
 }
 
+// タブレット、PCサイズの表示
 @media screen and (min-width: 768px) {
-  body {
-    letter-spacing: 0.05em;
-    color: #3c301e;
+    body {
+      letter-spacing: 0.05em;
+      color: #3c301e;
+    }
+    .header {
+      padding: 16px;
+    }
+    .header-inner {
+      max-width: 1080px;
+      padding: 0 40px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+    }
+    .header-nav-list {
+      gap: 40px;
+    }
+    .header-nav-link {
+      transition: opacity 0.3s;
+  
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    .section-heading-main{
+        font-size: 64px;
+    }
+    .about{
+        padding-top: 80px;
+    }
+    .about-contents{
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+
+        img{
+            width: 300px;
+        }
+    }
+    .menu-contents-list{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    .menu-contents-item + .menu-contents-item{
+        margin-top: 0;
+    }
+    .menu-img{
+        width: 300px;
+    }
+    .form{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    .shop-inner{
+        margin: 0 auto;
+        max-width: 600px;
+    }
+    .inner{
+        max-width: 1080px;
+        padding: 0 40px;
+        margin: 0 auto;
+    }
   }
-  .header {
-    padding: 16px;
-  }
-  .header-inner {
-    max-width: 1080px;
-    padding: 0 40px;
-    margin: 0 auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .header-nav-list {
-    gap: 40px;
-  }
-  .header-nav-link {
-    -webkit-transition: opacity 0.3s;
-    transition: opacity 0.3s;
-  }
-  .header-nav-link:hover {
-    opacity: 0.7;
-  }
-  .section-heading-main {
-    font-size: 64px;
-  }
-  .about {
-    padding-top: 80px;
-  }
-  .about-contents {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    gap: 40px;
-  }
-  .about-contents img {
-    width: 300px;
-  }
-  .menu-contents-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    gap: 20px;
-  }
-  .menu-contents-item + .menu-contents-item {
-    margin-top: 0;
-  }
-  .menu-img {
-    width: 300px;
-  }
-  .form {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    gap: 20px;
-  }
-  .shop-inner {
-    margin: 0 auto;
-    max-width: 600px;
-  }
-  .inner {
-    max-width: 1080px;
-    padding: 0 40px;
-    margin: 0 auto;
-  }
-}
+  
